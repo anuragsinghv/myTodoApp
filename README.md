@@ -22,4 +22,5 @@ This is a stylish and interactive To-Do list app designed to look like a notepad
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/my-todo-notepad.git
+   git clone https://github.com/anuragsinghv/myTodoApp.git
+
