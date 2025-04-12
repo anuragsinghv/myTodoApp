@@ -1,0 +1,159 @@
+body {
+    background: #f4f1e9;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    margin: 0;
+    min-height: 100vh;
+  }
+  
+  .notepad {
+    background: #fff;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  #todoInput {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: 1px solid #aaa;
+    outline: none;
+    animation: typewriter 0.8s steps(20) 1;
+    transition: box-shadow 0.3s;
+    box-sizing: border-box;
+  }
+  
+  #todoInput:focus {
+    box-shadow: 0 0 10px #007bff;
+  }
+  
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  #todoList {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    flex-grow: 1;
+  }
+  
+  #todoList li {
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideIn 0.4s ease-out forwards;
+    font-size: 1.1rem;
+    word-break: break-word;
+  }
+  
+  #todoList li.done {
+    text-decoration: line-through;
+    color: green;
+  }
+  
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #todoList li.active {
+    border: 2px solid #007bff;
+  }
+  
+  #signal {
+    color: green;
+    margin-top: 10px;
+    text-align: center;
+    display: none;
+    font-size: 1rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    body {
+      padding: 20px;
+      font-size: 18px;
+    }
+  
+    .notepad {
+      width: 100%;
+      max-width: none;
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    #todoInput {
+      font-size: 22px;
+      padding: 18px 25px;
+    }
+  
+    #todoList li {
+      font-size: 1.4rem;
+      padding: 20px 25px;
+    }
+  
+    #signal {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    body {
+      padding: 10px;
+      font-size: 20px;
+    }
+  
+    .notepad {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    #todoInput {
+      font-size: 24px;
+      padding: 20px 30px;
+    }
+  
+    #todoList li {
+      font-size: 1.5rem;
+      padding: 22px 30px;
+    }
+  
+    #signal {
+      font-size: 1.2rem;
+    }
+  }
+  
